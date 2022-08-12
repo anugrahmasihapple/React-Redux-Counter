@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import store from './store';
+
 import './App.css';
+import Counter from './components/Counter';
+import Count from './components/Count';
 
 function App() {
   return (
+    <Provider store={store}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>The React & Redux Counter App</h1>
+      <Counter />,
+      <Count />
     </div>
+    </Provider>
   );
 }
 
